@@ -1,4 +1,8 @@
 $(document).ready(function() {
+
+	$("#cerca").show();
+	$("#mostra").hide();
+
     $("#search").submit(function(event){
     	event.preventDefault();
        cerca();
@@ -28,6 +32,7 @@ $(document).ready(function() {
 	       			"</tr>";
 	       		}
 	       		$("#dati").html(tr);
+	       		$("#mostra").show();
 	       	}
        	},
        	error: function(response){
