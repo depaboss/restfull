@@ -20,6 +20,7 @@ $(document).ready(function() {
        			var tr = "";
 	       		for(i = 0; i < n ; i++){
 	       			tr += "<tr>" +
+	       			//aggiungere poster
 	       			"<td>" + response.Search[i].Title + "</td>" +
 	       			"<td>" + response.Search[i].Type + "</td>" +
 	       			"<td>" + response.Search[i].Year + "</td>" +
