@@ -5,7 +5,7 @@ $(document).ready(function() {
 
     $("#search").submit(function(event){
     	event.preventDefault();
-       cerca();
+       	cerca();
    });
 
    function cerca(){
@@ -42,13 +42,8 @@ $(document).ready(function() {
    };
 
    function stampaPoster(url){
-   		if(url == "" || url == null){
-   			//no img poster
-   		}
-   		else{
-	   		var txt = "";
-	   		txt = "<td><img src='" + url + "' > </td>";
-	   	}
+	   	var txt = "";
+	   	txt = "<td><img src='" + url + "' > </td>";
    		return txt;
    };
 
