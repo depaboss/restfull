@@ -19,3 +19,7 @@ img{
 	height: 150px;
 	background-color: grey;
 }
+
+.riga_file{
+	cursor: pointer;
+}

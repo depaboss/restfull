@@ -23,8 +23,7 @@ $(document).ready(function() {
        		else{
        			var tr = "";
 	       		for(i = 0; i < n ; i++){
-	       			tr += "<tr>" +
-	       			//aggiungere poster
+	       			tr += "<tr class='riga_click'>" +
 	       			stampaPoster(response.Search[i].Poster) +
 	       			"<td>" + response.Search[i].Title + "</td>" +
 	       			"<td>" + response.Search[i].Type + "</td>" +
@@ -43,8 +42,17 @@ $(document).ready(function() {
 
    function stampaPoster(url){
 	   	var txt = "";
-	   	txt = "<td><img src='" + url + "' > </td>";
+	   	if(url == "N/A"){
+	   		txt = "<td><img src='img/download.png'></td>";
+	   	}
+	   	else{
+	   		txt = "<td><img src='" + url + "' > </td>";
+	   	}
    		return txt;
    };
+
+   $("tr").on("click", "riga_click", function(){
+   		console.log("click");
+   });
 
 });
