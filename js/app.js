@@ -23,7 +23,7 @@ $(document).ready(function() {
        		else{
        			var tr = "";
 	       		for(i = 0; i < n ; i++){
-	       			tr += "<tr class='riga_click'>" +
+	       			tr += "<tr class='riga'>" +
 	       			stampaPoster(response.Search[i].Poster) +
 	       			"<td>" + response.Search[i].Title + "</td>" +
 	       			"<td>" + response.Search[i].Type + "</td>" +
@@ -51,7 +51,7 @@ $(document).ready(function() {
    		return txt;
    };
 
-   $("tr").on("click", "riga_click", function(){
+   $("tbody").on("click", "tr", function(){
    		console.log("click");
    });
 
