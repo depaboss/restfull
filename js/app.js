@@ -23,7 +23,7 @@ $(document).ready(function() {
        		else{
        			var tr = "";
 	       		for(i = 0; i < n ; i++){
-	       			tr += "<tr class='riga'>" +
+	       			tr += "<tr class='riga' title='" + response.Search[i].Title + "'>" +
 	       			stampaPoster(response.Search[i].Poster) +
 	       			"<td>" + response.Search[i].Title + "</td>" +
 	       			"<td>" + response.Search[i].Type + "</td>" +
@@ -52,7 +52,8 @@ $(document).ready(function() {
    };
 
    $("tbody").on("click", "tr", function(){
-   		console.log("click");
+   		var title = $(this).attr("title");
+   		console.log(title);
    });
 
 });
