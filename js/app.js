@@ -52,8 +52,50 @@ $(document).ready(function() {
    };
 
    $("tbody").on("click", "tr", function(){
+
    		var title = $(this).attr("title");
-   		console.log(title);
+   		
+   		$.ajax({
+   			url: "http://www.omdbapi.com/?t=" + title,
+   			method: "GET",
+   			success: function(response){
+
+   				var poster = response.Poster;
+
+   				var actors = response.Actors;
+   				var director = response.Director;
+   				var genre = response.Genre;
+   				var language = response.Language;
+   				var metascore = response.Metascore;
+   				var plot = response.Plot;
+   				var released = response.Released;
+   				var writer = response.Writer;
+   				var year = response.Year;
+
+   				var listalbl = ["Title: ", "Released: ", "Year: ", "Actors: ", "Director: ", "Genre: ", "Language: ", "Metascore: ", "Plot: ", "Writer: "]
+   				var lista = [title, released, year, actors, director, genre, language, metascore, plot, writer];
+   				var n = lista.length;
+   				var i = 0;
+
+   				var tr = "";
+
+   				tr += "<img src=" + poster + ">";
+
+   				for(i = 0; i < n; i++){
+   					//prepara stampa
+   					tr += "<tr>" +
+   					"<td>" + listalbl[i] + "</td>" +
+   					"<td>" + lista[i] + "</td>" +
+   					"</tr>";
+   				}
+   				$("#testata").hide();
+   				$("#dati").html(tr);
+   			},
+   			error: function(response){
+   				console.log(response);
+   			}
+   		});
+
    });
 
 });
