@@ -21,6 +21,7 @@ $(document).ready(function() {
 	       		for(i = 0; i < n ; i++){
 	       			tr += "<tr>" +
 	       			//aggiungere poster
+	       			stampaPoster(response.Search[i].Poster) +
 	       			"<td>" + response.Search[i].Title + "</td>" +
 	       			"<td>" + response.Search[i].Type + "</td>" +
 	       			"<td>" + response.Search[i].Year + "</td>" +
@@ -34,4 +35,16 @@ $(document).ready(function() {
        	}
        });
    };
+
+   function stampaPoster(url){
+   		if(url == "" || url == null){
+   			//no img poster
+   		}
+   		else{
+	   		var txt = "";
+	   		txt = "<td><img src='" + url + "' > </td>";
+	   	}
+   		return txt;
+   };
+
 });

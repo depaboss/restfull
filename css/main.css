@@ -13,3 +13,9 @@
 .navbar-nav{
 	float: right;
 }
+
+img{
+	width: 100px;
+	height: 150px;
+	background-color: grey;
+}
