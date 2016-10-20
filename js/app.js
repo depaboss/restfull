@@ -11,12 +11,15 @@ $(document).ready(function() {
    function cerca(){
        // cerca per titolo
        var titolo = $("#title").val();
+       var genere = $("#genere").val();
+
        $.ajax({
-       	url: "http://www.omdbapi.com/?s=" + titolo,
+       	url: "http://www.omdbapi.com/?s=" + titolo + "&type=" + genere,
        	method: "GET",
        	success: function(response){
        		var i = 0;
-       		var n = response.Search.length;
+       		var n = 0;
+       		if(response.Search.length != null) {n = response.Search.length;}
        		if(response.Response == "False"){
        			alert(response.Error);
        		}
