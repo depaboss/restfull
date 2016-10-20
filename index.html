@@ -18,27 +18,35 @@
         <h2>Cerca Film</h2>
         <!-- APPLICATION START HERE -->
 
-        <form id="search">
-            <input id="title" type="text" name="title" placeholder="Titolo">
-            <button type="submit">Cerca</button>
-        </form>
+        <div id="cerca">
 
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <td>Poster</td>
-                    <td>Titolo</td>
-                    <td>Tipo</td>
-                    <td>Anno</td>
-                </tr>
-            </thead>
+            <form id="search">
+                <input id="title" type="text" name="title" placeholder="Titolo">
+                <button type="submit">Cerca</button>
+            </form>
 
-            <tbody id="dati">
-            </tbody>
+        </div>
 
-            <tfoot>
-            </tfoot>
-        </table>
+        <div id="mostra">
+
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <td>Poster</td>
+                        <td>Titolo</td>
+                        <td>Tipo</td>
+                        <td>Anno</td>
+                    </tr>
+                </thead>
+
+                <tbody id="dati">
+                </tbody>
+
+                <tfoot>
+                </tfoot>
+            </table>
+        
+        </div>
         
     </div>
     <!-- JQUERY DEPENDENCIES -->
