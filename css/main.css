@@ -13,3 +13,8 @@
 .navbar-nav{
 	float: right;
 }
+
+#poster{
+	width: 400px;
+	height: 400px;
+}
